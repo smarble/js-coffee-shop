@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway" >
     <!-- Our CSS -->
     <link rel="stylesheet" href="static/coffee.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
@@ -45,11 +49,17 @@
 </div>
 
 <script>
-
+    // Top lines are vanilla JavaScript, bottom lines are Jquery
     // Set these variables to their DOM elements
 
-    let coffeeImage = document.querySelector('img');
-    coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+    // let coffeeImage = document.querySelector('img');
+    let coffeeImage = $('#coffee-image');
+
+
+    // coffeeImage.setAttribute('src', 'static/coffee_beans.jpg');
+    coffeeImage.attr("src", "static/coffee_beans.jpg");
+
+
     let revenueMessage;
 
     // use this JavaScript object in further study step
@@ -62,11 +72,11 @@
     };
 
     function makeCoffee(){
-        coffeeImage.setAttribute('src', 'static/coffee_machine.jpg');
+        coffeeImage.attr("src", "static/coffee_machine.jpg");
 
-        setTimeout(function secondFunc(){coffeeImage.setAttribute('src', 'static/coffee_mug.jpg')}, 15000);    
+        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_mug.jpg")}, 1500);    
 
-        setTimeout(function secondFunc(){coffeeImage.setAttribute('src', 'static/coffee_beans.jpg')}, 25000);  
+        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_beans.jpg")}, 2500);  
     }    
 
 
