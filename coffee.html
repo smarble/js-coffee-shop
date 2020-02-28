@@ -70,17 +70,24 @@
         "latte": 4.15,
         "hot chocolate": 2.50
     };
-
+    
+    // For the function makeCoffee, see vanilla javascript in github. accidentally deleted.
     function makeCoffee(){
         coffeeImage.attr("src", "static/coffee_machine.jpg");
 
-        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_mug.jpg")}, 1500);    
+        // setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_mug.jpg")}, 1500);    
+        // coffeeImage.attr("src", "static/coffee_mug.jpg").delay(200);
+        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_mug.jpg")}, 1500);   
 
-        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_beans.jpg")}, 2500);  
+        // setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_beans.jpg")}, 2500);  
+        // coffeeImage.attr("src", "static/coffee_beans.jpg").delay(600);
+        setTimeout(function secondFunc(){coffeeImage.attr("src", "static/coffee_beans.jpg")}, 2500);   
     }    
 
 
-    coffeeImage.addEventListener('click', makeCoffee);
+    // coffeeImage.addEventListener('click', makeCoffee);
+    coffeeImage.on('click', makeCoffee);
+
     console.log('testing 123');
 
     
@@ -89,3 +96,9 @@
 
 </body>
 </html>
+
+
+
+
+
+
